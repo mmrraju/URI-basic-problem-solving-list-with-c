@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int ara[100],i,j,n,sum=0,x,y,max,min;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        sum=0;
+        scanf("%d%d",&x,&y);
+        if(x>y)
+        {
+            max=x;
+            min=y;
+        }
+        else
+        {
+            max=y;
+            min=x;
+        }
+        for(j=min+1;j<max;j++)
+        {
+            if((j%2)!=0)
+            {
+                sum=sum+j;
+            }
+        }
+        printf("%d\n",sum);
+    }
+}
